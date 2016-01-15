@@ -29,7 +29,7 @@ export default Component.extend({
       color: '#aaaaaa'
     }];
 
-    let defaults = { series: chartContent };
+    let defaults = { series: (chartOptions.series ? $.extend(true, chartOptions.series, chartContent) : chartContent) };
 
     return merge(defaults, chartOptions);
   }),
